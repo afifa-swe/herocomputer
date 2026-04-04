@@ -8,11 +8,6 @@ if [ -n "$DATABASE_URL" ]; then
     export DATABASE_URL=$(echo "$DATABASE_URL" | sed 's|^postgres://|pgsql://|')
 fi
 
-# Generate APP_KEY if it's not in Laravel format
-if [ -z "$APP_KEY" ] || [[ "$APP_KEY" != base64:* ]]; then
-    php artisan key:generate --force
-fi
-
 # Create required storage directories
 mkdir -p storage/logs storage/framework/{cache,sessions,views} bootstrap/cache
 chmod -R 775 storage bootstrap/cache
