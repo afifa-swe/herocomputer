@@ -8,14 +8,7 @@ services:
   - type: web
     name: herocomputer
     plan: free
-    runtime: php
-    buildCommand: |
-      composer install --no-dev --optimize-autoloader &&
-      npm ci && npm run build &&
-      php artisan config:cache &&
-      php artisan route:cache &&
-      php artisan view:cache
-    startCommand: php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT
+    runtime: docker
     healthCheckPath: /up
     envVars:
       - key: APP_NAME
