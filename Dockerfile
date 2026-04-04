@@ -14,9 +14,12 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 RUN npm ci && npm run build && rm -rf node_modules
 
-RUN chown -R www-data:www-data storage bootstrap/cache \
+RUN mkdir -p storage/logs storage/framework/cache storage/framework/sessions storage/framework/views bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
 
 EXPOSE 10000
 
-CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=10000
+COPY docker/start.sh /start.sh
+RUN chmod +x /start.sh
+
+CMD ["/start.sh"]
