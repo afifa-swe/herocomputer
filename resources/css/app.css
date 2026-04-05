@@ -82,13 +82,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .nav-logo {
-  font-family: var(--font-h);
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: .1em;
+  display: flex;
+  align-items: center;
   color: var(--white);
 }
-.nav-logo span { color: var(--accent-light); }
+.nav-logo svg { display: block; }
 
 .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; flex-shrink: 0; }
 .nav-links a {

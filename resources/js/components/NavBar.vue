@@ -1,6 +1,16 @@
 <template>
   <nav id="nav" :class="{ scrolled: isScrolled }">
-    <router-link class="nav-logo" to="/">HERO<span>COMPUTER</span></router-link>
+    <router-link class="nav-logo" to="/">
+      <svg width="190" height="34" viewBox="0 0 190 34">
+        <rect x="1" y="1" width="34" height="32" rx="8" fill="#0F0F1A" stroke="#4F8EFF" stroke-width="1.5"/>
+        <rect x="6" y="6" width="7" height="5" rx="1" fill="#4F8EFF" opacity="0.5"/>
+        <rect x="16" y="6" width="7" height="5" rx="1" fill="#4F8EFF" opacity="0.5"/>
+        <rect x="26" y="6" width="4" height="5" rx="1" fill="#4F8EFF" opacity="0.5"/>
+        <text x="8" y="26" font-family="monospace" font-size="13" font-weight="900" fill="#4F8EFF">&gt;_</text>
+        <text x="44" y="15" font-family="Arial Black,sans-serif" font-size="13" font-weight="900" fill="#fff" letter-spacing="1">HERO</text>
+        <text x="44" y="29" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#4F8EFF" letter-spacing="3">COMPUTER</text>
+      </svg>
+    </router-link>
     <ul class="nav-links">
       <li v-for="link in navLinks" :key="link.name">
         <router-link :to="link.path" :class="{ active: $route.name === link.name }">{{ $t('nav.' + link.name) }}</router-link>
