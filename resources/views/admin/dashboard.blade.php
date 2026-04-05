@@ -10,14 +10,14 @@
         <div class="card-num">{{ $contactsCount }}</div>
         <div class="card-label">Contact Requests</div>
         @if($unreadContacts > 0)
-            <div style="margin-top:.5rem;font-size:.78rem;color:#237a4d;">{{ $unreadContacts }} unread</div>
+            <div style="margin-top:.5rem;font-size:.78rem;color:#4F8EFF;">{{ $unreadContacts }} unread</div>
         @endif
     </div>
     <div class="card">
         <div class="card-num">{{ $devsCount }}</div>
         <div class="card-label">Dev Applications</div>
         @if($unreadDevs > 0)
-            <div style="margin-top:.5rem;font-size:.78rem;color:#237a4d;">{{ $unreadDevs }} unread</div>
+            <div style="margin-top:.5rem;font-size:.78rem;color:#4F8EFF;">{{ $unreadDevs }} unread</div>
         @endif
     </div>
     <div class="card">

@@ -8,7 +8,7 @@
         <h1 style="font-family:var(--font-h);font-weight:800;font-size:clamp(3rem,7vw,6.5rem);line-height:.95;letter-spacing:-.03em;">
           <span>{{ $t('contacts.h1a') }}</span><br>
           <span>{{ $t('contacts.h1b') }}</span><br>
-          <em style="color:var(--accent-light);font-style:normal;">{{ $t('contacts.h1c') }}</em>
+          <em style="color:var(--accent);font-style:normal;">{{ $t('contacts.h1c') }}</em>
         </h1>
         <p style="font-size:1.1rem;color:var(--muted);max-width:480px;margin-top:2rem;">{{ $t('contacts.desc') }}</p>
       </div>
@@ -59,7 +59,7 @@
           <FadeUp :delay="320">
             <div style="margin-top:3rem;padding:2rem;background:var(--gray1);border:1px solid var(--border);">
               <div style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;">{{ $t('contacts.resp_label') }}</div>
-              <div style="font-family:var(--font-h);font-size:2rem;font-weight:800;color:var(--accent-light);">{{ $t('contacts.resp_time') }}</div>
+              <div style="font-family:var(--font-h);font-size:2rem;font-weight:800;color:var(--accent);">{{ $t('contacts.resp_time') }}</div>
               <p style="font-size:.85rem;color:var(--muted);margin-top:.5rem;line-height:1.6;">{{ $t('contacts.resp_desc') }}</p>
             </div>
           </FadeUp>
@@ -79,7 +79,7 @@
             <button type="submit" class="btn-submit" :disabled="loading">
               {{ loading ? '...' : $t('contacts.f_send') }}
             </button>
-            <div v-if="sent" style="margin-top:1rem;color:var(--accent-light);font-size:.9rem;">{{ $t('contacts.f_success') }}</div>
+            <div v-if="sent" style="margin-top:1rem;color:var(--accent);font-size:.9rem;">{{ $t('contacts.f_success') }}</div>
             <div v-if="error" style="margin-top:1rem;color:#d44;font-size:.9rem;">{{ error }}</div>
           </form>
         </FadeUp>

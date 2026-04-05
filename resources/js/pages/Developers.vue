@@ -7,7 +7,7 @@
         <div class="section-tag">{{ $t('developers.eyebrow') }}</div>
         <h1 style="font-family:var(--font-h);font-weight:800;font-size:clamp(3rem,7vw,6.5rem);line-height:.95;letter-spacing:-.03em;">
           <span>{{ $t('developers.h1a') }}</span><br>
-          <em style="color:var(--accent-light);font-style:normal;">{{ $t('developers.h1b') }}</em>
+          <em style="color:var(--accent);font-style:normal;">{{ $t('developers.h1b') }}</em>
         </h1>
         <p style="font-size:1.1rem;color:var(--muted);max-width:520px;margin-top:2rem;">{{ $t('developers.desc') }}</p>
       </div>
@@ -30,7 +30,7 @@
         <FadeUp :delay="100">
           <p style="font-size:1.05rem;color:var(--muted);line-height:1.8;">We work with the best developers remotely. Fair pay, interesting projects, strict but fair standards. Join a team that takes quality seriously.</p>
           <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-            <span style="padding:.4rem 1rem;border:1px solid rgba(27,94,59,.4);color:var(--accent-light);font-size:.8rem;border-radius:2px;">Remote First</span>
+            <span style="padding:.4rem 1rem;border:1px solid rgba(79,142,255,.4);color:var(--accent);font-size:.8rem;border-radius:2px;">Remote First</span>
             <span style="padding:.4rem 1rem;border:1px solid var(--border);color:var(--muted);font-size:.8rem;border-radius:2px;">Flexible Hours</span>
             <span style="padding:.4rem 1rem;border:1px solid var(--border);color:var(--muted);font-size:.8rem;border-radius:2px;">Long-term Projects</span>
           </div>
@@ -95,7 +95,7 @@
             <button type="submit" class="btn-submit" :disabled="devLoading">
               {{ devLoading ? '...' : $t('developers.f_send') }}
             </button>
-            <div v-if="devSent" style="margin-top:1rem;color:var(--accent-light);font-size:.9rem;">✓</div>
+            <div v-if="devSent" style="margin-top:1rem;color:var(--accent);font-size:.9rem;">✓</div>
           </form>
         </FadeUp>
       </div>

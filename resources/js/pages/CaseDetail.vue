@@ -71,7 +71,7 @@
       <FadeUp>
         <div class="grid-3" style="border:1px solid var(--border);">
           <div v-for="(r, ri) in parseList(cs.results)" :key="ri" class="card card-dark" style="text-align:center;padding:2.5rem 1.5rem;">
-            <div style="font-family:var(--font-h);font-size:2rem;font-weight:800;color:var(--accent-light);margin-bottom:.5rem;">{{ r.split(' — ')[0] || r }}</div>
+            <div style="font-family:var(--font-h);font-size:2rem;font-weight:800;color:var(--accent);margin-bottom:.5rem;">{{ r.split(' — ')[0] || r }}</div>
             <div style="font-size:.85rem;color:var(--muted);">{{ r.split(' — ')[1] || '' }}</div>
           </div>
         </div>

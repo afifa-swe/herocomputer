@@ -8,7 +8,7 @@
         <h1 style="font-family:var(--font-h);font-weight:800;font-size:clamp(3rem,7vw,6.5rem);line-height:.95;letter-spacing:-.03em;">
           <span>{{ $t('cases.h1a') }}</span><br>
           <span>{{ $t('cases.h1b') }}</span><br>
-          <em style="color:var(--accent-light);font-style:normal;">{{ $t('cases.h1c') }}</em>
+          <em style="color:var(--accent);font-style:normal;">{{ $t('cases.h1c') }}</em>
         </h1>
         <p style="font-size:1.1rem;color:var(--muted);max-width:500px;margin-top:2rem;">{{ $t('cases.desc') }}</p>
       </div>

@@ -190,7 +190,7 @@
         <FadeUp :delay="100">
           <div class="dev-teaser-grid">
             <div style="background:var(--gray1);padding:2rem;text-align:center;">
-              <div style="font-family:var(--font-h);font-size:2.5rem;font-weight:800;color:var(--accent-light);">$50</div>
+              <div style="font-family:var(--font-h);font-size:2.5rem;font-weight:800;color:var(--accent);">$50</div>
               <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:.5rem;">{{ $t('developers.rate_per') }}</div>
             </div>
             <div style="background:var(--gray1);padding:2rem;text-align:center;">
@@ -204,7 +204,7 @@
 
     <!-- CONTACT CTA -->
     <section class="section section-dark section-cta">
-      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(27,94,59,.08) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(79,142,255,.08) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:relative;z-index:1;max-width:640px;margin:0 auto;">
         <div class="section-tag" style="justify-content:center;">{{ $t('home.contact_tag') }}</div>
         <h2 class="section-title" style="font-size:clamp(2.5rem,6vw,5rem);margin-bottom:1.25rem;">{{ $t('home.contact_h') }}</h2>
@@ -220,7 +220,7 @@
           <button type="submit" class="btn-submit" :disabled="homeLoading">
             {{ homeLoading ? '...' : $t('home.f_send') }}
           </button>
-          <div v-if="homeSent" style="margin-top:1rem;color:var(--accent-light);font-size:.9rem;">✓</div>
+          <div v-if="homeSent" style="margin-top:1rem;color:var(--accent);font-size:.9rem;">✓</div>
         </form>
       </div>
     </section>

@@ -7,7 +7,7 @@
         <div class="section-tag">{{ $t('services.eyebrow') }}</div>
         <h1 style="font-family:var(--font-h);font-weight:800;font-size:clamp(3rem,7vw,6.5rem);line-height:.95;letter-spacing:-.03em;">
           <span>{{ $t('services.h1a') }}</span><br>
-          <em style="color:var(--accent-light);font-style:normal;">{{ $t('services.h1b') }}</em>
+          <em style="color:var(--accent);font-style:normal;">{{ $t('services.h1b') }}</em>
         </h1>
         <p style="font-size:1.1rem;color:var(--muted);max-width:500px;margin-top:2rem;">{{ $t('services.desc') }}</p>
       </div>
@@ -37,7 +37,7 @@
       <FadeUp>
         <div class="grid-3">
           <div v-for="i in 6" :key="i" class="card card-dark">
-            <div style="font-family:var(--font-h);font-size:1.75rem;font-weight:800;color:var(--accent-light);margin-bottom:1rem;letter-spacing:-.03em;">{{ String(i).padStart(2, '0') }}</div>
+            <div style="font-family:var(--font-h);font-size:1.75rem;font-weight:800;color:var(--accent);margin-bottom:1rem;letter-spacing:-.03em;">{{ String(i).padStart(2, '0') }}</div>
             <h3>{{ $t('services.p' + i + 'h') }}</h3>
             <p>{{ $t('services.p' + i + 'p') }}</p>
           </div>

@@ -9,7 +9,7 @@
         <h1 style="font-family:var(--font-h);font-weight:800;font-size:clamp(3rem,7vw,6.5rem);line-height:.95;letter-spacing:-.03em;">
           <span>{{ $t('about.h1a') }}</span><br>
           <span>{{ $t('about.h1b') }}</span><br>
-          <em style="color:var(--accent-light);font-style:normal;">{{ $t('about.h1c') }}</em>
+          <em style="color:var(--accent);font-style:normal;">{{ $t('about.h1c') }}</em>
         </h1>
         <p style="font-size:1.1rem;color:var(--muted);max-width:500px;margin-top:2rem;">{{ $t('about.desc') }}</p>
       </div>
@@ -20,7 +20,7 @@
       <FadeUp>
         <div class="grid-4" style="border:1px solid var(--border);">
           <div v-for="(stat, idx) in stats" :key="idx" class="card card-dark" style="text-align:center;padding:3rem 1.5rem;">
-            <div style="font-family:var(--font-h);font-size:3.5rem;font-weight:800;letter-spacing:-.04em;color:var(--accent-light);line-height:1;">{{ stat.num }}</div>
+            <div style="font-family:var(--font-h);font-size:3.5rem;font-weight:800;letter-spacing:-.04em;color:var(--accent);line-height:1;">{{ stat.num }}</div>
             <div style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:.75rem;">{{ stat.label }}</div>
           </div>
         </div>
@@ -117,15 +117,15 @@
         <FadeUp :delay="100">
           <div class="grid-2">
             <div class="biz-card">
-              <div style="width:48px;height:48px;border-radius:50%;background:var(--accent-subtle);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              <div style="width:48px;height:48px;border-radius:50%;background:var(--accent-subtle);border:1px solid var(--accent-20);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
               </div>
               <h3 style="font-family:var(--font-h);font-weight:700;font-size:1.15rem;margin-bottom:.75rem;">{{ $t('about.b1h') }}</h3>
               <p style="font-size:.88rem;color:var(--muted);line-height:1.7;">{{ $t('about.b1p') }}</p>
             </div>
             <div class="biz-card">
-              <div style="width:48px;height:48px;border-radius:50%;background:var(--accent-subtle);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              <div style="width:48px;height:48px;border-radius:50%;background:var(--accent-subtle);border:1px solid var(--accent-20);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
               </div>
               <h3 style="font-family:var(--font-h);font-weight:700;font-size:1.15rem;margin-bottom:.75rem;">{{ $t('about.b2h') }}</h3>
               <p style="font-size:.88rem;color:var(--muted);line-height:1.7;">{{ $t('about.b2p') }}</p>
@@ -147,10 +147,10 @@
         <FadeUp :delay="100">
           <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);">
             <div v-for="i in 3" :key="i" style="background:var(--gray1);padding:1.75rem 2rem;display:flex;align-items:center;gap:1.25rem;">
-              <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-subtle);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                <svg v-if="i===1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-                <svg v-if="i===2" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
-                <svg v-if="i===3" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-subtle);border:1px solid var(--accent-20);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg v-if="i===1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                <svg v-if="i===2" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
+                <svg v-if="i===3" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
               <div>
                 <div style="font-family:var(--font-h);font-weight:700;font-size:.95rem;margin-bottom:.2rem;">{{ $t('about.team' + i + 'h') }}</div>
@@ -164,7 +164,7 @@
 
     <!-- CTA -->
     <section class="section section-cta">
-      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(27,94,59,.08) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(79,142,255,.08) 0%,transparent 60%);pointer-events:none;"></div>
       <FadeUp style="position:relative;z-index:1;max-width:600px;margin:0 auto;">
         <div class="section-tag" style="justify-content:center;">{{ $t('about.cta_tag') }}</div>
         <h2 class="section-title" style="font-size:clamp(2.5rem,5vw,4rem);margin-bottom:1.25rem;">{{ $t('about.cta_h') }}</h2>
