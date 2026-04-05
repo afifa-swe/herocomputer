@@ -58,6 +58,7 @@ const portfolioSlides = {
   2: { slug: 'olalearn', count: 10 },
   3: { slug: 'octosells', count: 11 },
   4: { slug: 'zaymekspress', count: 10 },
+  5: { slug: 'nothere', count: 6 },
 };
 
 const casesWithPhotos = computed(() =>
