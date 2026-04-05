@@ -4,11 +4,11 @@
     <section class="contact-hero" :style="{ background: `linear-gradient(135deg, ${cs.color}, ${cs.color2})` }">
       <div class="page-hero-bg"></div>
       <div class="page-hero-inner">
-        <div class="section-tag" style="color:rgba(255,255,255,.5);">{{ cs.tag }}</div>
+        <div class="section-tag" style="color:#94A3B8;">{{ cs.tag }}</div>
         <h1 style="font-family:var(--font-h);font-weight:800;font-size:clamp(2.5rem,6vw,5rem);line-height:1;letter-spacing:-.03em;">
           {{ cs.h }}
         </h1>
-        <p style="font-size:1.1rem;color:rgba(255,255,255,.55);max-width:520px;margin-top:1.5rem;">{{ cs.p }}</p>
+        <p style="font-size:1.1rem;color:#CBD5E1;max-width:520px;margin-top:1.5rem;">{{ cs.p }}</p>
       </div>
     </section>
 
@@ -25,11 +25,11 @@
         <FadeUp>
           <div class="section-tag">{{ $t('case_detail.overview_tag') }}</div>
           <h2 class="section-title">{{ $t('case_detail.overview_h') }}</h2>
-          <p style="color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:1.5rem;">{{ cs.p }}</p>
+          <p style="color:#CBD5E1;font-size:1rem;line-height:1.8;margin-bottom:1.5rem;">{{ cs.p }}</p>
           <div v-if="cs.role" style="margin-top:1.5rem;">
             <div style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem;">{{ $t('case_detail.role_label') }}</div>
             <ul style="list-style:none;padding:0;">
-              <li v-for="(r, ri) in parseList(cs.role)" :key="ri" style="padding:.4rem 0;font-size:.9rem;color:var(--muted);display:flex;align-items:center;gap:.75rem;">
+              <li v-for="(r, ri) in parseList(cs.role)" :key="ri" style="padding:.4rem 0;font-size:.9rem;color:#CBD5E1;display:flex;align-items:center;gap:.75rem;">
                 <span style="width:4px;height:4px;background:var(--accent-light);border-radius:50%;flex-shrink:0;"></span>
                 {{ r }}
               </li>
@@ -39,15 +39,15 @@
         <FadeUp :delay="100">
           <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);">
             <div style="background:var(--gray1);padding:1.5rem 2rem;">
-              <div style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;">{{ $t('case_detail.client_label') }}</div>
+              <div style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#CBD5E1;margin-bottom:.4rem;">{{ $t('case_detail.client_label') }}</div>
               <div style="font-size:1rem;font-weight:600;">{{ cs.client || cs.label }}</div>
             </div>
             <div style="background:var(--gray1);padding:1.5rem 2rem;">
-              <div style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;">{{ $t('case_detail.tech_label') }}</div>
+              <div style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#CBD5E1;margin-bottom:.4rem;">{{ $t('case_detail.tech_label') }}</div>
               <div style="font-size:1rem;font-weight:600;">{{ cs.tech }}</div>
             </div>
             <div style="background:var(--gray1);padding:1.5rem 2rem;">
-              <div style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;">{{ $t('case_detail.category_label') }}</div>
+              <div style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#CBD5E1;margin-bottom:.4rem;">{{ $t('case_detail.category_label') }}</div>
               <div style="font-size:1rem;font-weight:600;">{{ cs.tag }}</div>
             </div>
           </div>
@@ -65,7 +65,7 @@
         <div class="grid-3" style="border:1px solid var(--border);">
           <div v-for="(r, ri) in parseList(cs.results)" :key="ri" class="card card-dark" style="text-align:center;padding:2.5rem 1.5rem;">
             <div style="font-family:var(--font-h);font-size:2rem;font-weight:800;color:var(--accent);margin-bottom:.5rem;">{{ r.split(' — ')[0] || r }}</div>
-            <div style="font-size:.85rem;color:var(--muted);">{{ r.split(' — ')[1] || '' }}</div>
+            <div style="font-size:.85rem;color:#CBD5E1;">{{ r.split(' — ')[1] || '' }}</div>
           </div>
         </div>
       </FadeUp>
@@ -79,7 +79,7 @@
           <blockquote style="font-family:var(--font-h);font-size:1.3rem;font-weight:600;line-height:1.5;margin:1.5rem 0;color:var(--white);">
             "{{ cs.review }}"
           </blockquote>
-          <div style="font-size:.82rem;color:var(--muted);">— {{ cs.client || cs.label }}</div>
+          <div style="font-size:.82rem;color:#CBD5E1;">— {{ cs.client || cs.label }}</div>
         </div>
       </FadeUp>
     </section>

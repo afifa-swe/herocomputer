@@ -9,7 +9,7 @@
           <span>{{ $t('portfolio.h1a') }}</span><br>
           <em style="color:var(--accent);font-style:normal;">{{ $t('portfolio.h1b') }}</em>
         </h1>
-        <p style="font-size:1.1rem;color:var(--muted);max-width:500px;margin-top:2rem;">{{ $t('portfolio.desc') }}</p>
+        <p style="font-size:1.1rem;color:#CBD5E1;max-width:500px;margin-top:2rem;">{{ $t('portfolio.desc') }}</p>
       </div>
     </section>
 
@@ -40,7 +40,7 @@
             <div class="case-tag">{{ item.cs.tag }}</div>
             <h3>{{ item.cs.h }}</h3>
             <p>{{ item.cs.p }}</p>
-            <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;">{{ item.cs.tech }}</div>
+            <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;letter-spacing:.1em;color:#CBD5E1;text-transform:uppercase;">{{ item.cs.tech }}</div>
           </router-link>
         </TransitionGroup>
 
@@ -53,7 +53,7 @@
     <section class="section section-dark section-cta">
       <FadeUp style="max-width:560px;margin:0 auto;">
         <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.5rem);">{{ $t('portfolio.cta_h') }}</h2>
-        <p style="color:var(--muted);font-size:1rem;margin:1.25rem 0 2.5rem;">{{ $t('portfolio.cta_p') }}</p>
+        <p style="color:#CBD5E1;font-size:1rem;margin:1.25rem 0 2.5rem;">{{ $t('portfolio.cta_p') }}</p>
         <router-link to="/contacts" class="btn btn-primary">{{ $t('portfolio.cta_btn') }}</router-link>
       </FadeUp>
     </section>

@@ -10,7 +10,7 @@
           <span>{{ $t('cases.h1b') }}</span><br>
           <em style="color:var(--accent);font-style:normal;">{{ $t('cases.h1c') }}</em>
         </h1>
-        <p style="font-size:1.1rem;color:var(--muted);max-width:500px;margin-top:2rem;">{{ $t('cases.desc') }}</p>
+        <p style="font-size:1.1rem;color:#CBD5E1;max-width:500px;margin-top:2rem;">{{ $t('cases.desc') }}</p>
       </div>
     </section>
 
@@ -25,7 +25,7 @@
             <div class="case-tag">{{ cs.tag }}</div>
             <h3>{{ cs.h }}</h3>
             <p>{{ cs.p }}</p>
-            <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;">{{ cs.tech }}</div>
+            <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;letter-spacing:.1em;color:#CBD5E1;text-transform:uppercase;">{{ cs.tech }}</div>
           </router-link>
         </div>
       </FadeUp>
@@ -34,7 +34,7 @@
     <section class="section section-dark section-cta">
       <FadeUp style="max-width:560px;margin:0 auto;">
         <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.5rem);">{{ $t('cases.cta_h') }}</h2>
-        <p style="color:var(--muted);font-size:1rem;margin:1.25rem 0 2.5rem;">{{ $t('cases.cta_p') }}</p>
+        <p style="color:#CBD5E1;font-size:1rem;margin:1.25rem 0 2.5rem;">{{ $t('cases.cta_p') }}</p>
         <router-link to="/contacts" class="btn btn-primary">{{ $t('cases.cta_btn') }}</router-link>
       </FadeUp>
     </section>

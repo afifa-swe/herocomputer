@@ -9,7 +9,7 @@
           <span>{{ $t('services.h1a') }}</span><br>
           <em style="color:var(--accent);font-style:normal;">{{ $t('services.h1b') }}</em>
         </h1>
-        <p style="font-size:1.1rem;color:var(--muted);max-width:500px;margin-top:2rem;">{{ $t('services.desc') }}</p>
+        <p style="font-size:1.1rem;color:#CBD5E1;max-width:500px;margin-top:2rem;">{{ $t('services.desc') }}</p>
       </div>
     </section>
 
@@ -49,7 +49,7 @@
       <FadeUp style="max-width:600px;margin:0 auto;">
         <div class="section-tag" style="justify-content:center;">{{ $t('services.cta_tag') }}</div>
         <h2 class="section-title" style="font-size:clamp(2.5rem,5vw,4.5rem);" v-html="$t('services.cta_h').replace('\\n','<br>')"></h2>
-        <p style="color:var(--muted);font-size:1rem;margin:1.5rem 0 2.5rem;">{{ $t('services.cta_p') }}</p>
+        <p style="color:#CBD5E1;font-size:1rem;margin:1.5rem 0 2.5rem;">{{ $t('services.cta_p') }}</p>
         <router-link to="/contacts" class="btn btn-primary">{{ $t('services.cta_btn') }}</router-link>
       </FadeUp>
     </section>

@@ -11,7 +11,7 @@
           <span>{{ $t('about.h1b') }}</span><br>
           <em style="color:var(--accent);font-style:normal;">{{ $t('about.h1c') }}</em>
         </h1>
-        <p style="font-size:1.1rem;color:var(--muted);max-width:500px;margin-top:2rem;">{{ $t('about.desc') }}</p>
+        <p style="font-size:1.1rem;color:#CBD5E1;max-width:500px;margin-top:2rem;">{{ $t('about.desc') }}</p>
       </div>
     </section>
 
@@ -21,7 +21,7 @@
         <div class="grid-4" style="border:1px solid var(--border);">
           <div v-for="(stat, idx) in stats" :key="idx" class="card card-dark" style="text-align:center;padding:3rem 1.5rem;">
             <div style="font-family:var(--font-h);font-size:3.5rem;font-weight:800;letter-spacing:-.04em;color:var(--accent);line-height:1;">{{ stat.num }}</div>
-            <div style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:.75rem;">{{ stat.label }}</div>
+            <div style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#CBD5E1;margin-top:.75rem;">{{ stat.label }}</div>
           </div>
         </div>
       </FadeUp>
@@ -33,14 +33,14 @@
         <FadeUp>
           <div class="section-tag">{{ $t('about.tag1') }}</div>
           <h2 class="section-title" v-html="$t('about.h_mission').replace('\\n','<br>')"></h2>
-          <p style="color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:1rem;">{{ $t('about.p_mission1') }}</p>
-          <p style="color:var(--muted);font-size:1rem;line-height:1.8;">{{ $t('about.p_mission2') }}</p>
+          <p style="color:#CBD5E1;font-size:1rem;line-height:1.8;margin-bottom:1rem;">{{ $t('about.p_mission1') }}</p>
+          <p style="color:#CBD5E1;font-size:1rem;line-height:1.8;">{{ $t('about.p_mission2') }}</p>
         </FadeUp>
         <FadeUp :delay="100">
           <div style="position:relative;padding:3rem;background:var(--gray1);border:1px solid var(--border);">
             <div style="position:absolute;top:-1px;left:2rem;background:var(--accent);color:var(--white);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .8rem;font-weight:700;">{{ $t('about.philosophy_badge') }}</div>
             <blockquote style="font-family:var(--font-h);font-size:1.4rem;font-weight:700;line-height:1.4;margin-bottom:1.5rem;color:var(--white);">{{ $t('about.philosophy_quote') }}</blockquote>
-            <p style="font-size:.85rem;color:var(--muted);line-height:1.7;">{{ $t('about.philosophy_p') }}</p>
+            <p style="font-size:.85rem;color:#CBD5E1;line-height:1.7;">{{ $t('about.philosophy_p') }}</p>
           </div>
         </FadeUp>
       </div>
@@ -96,11 +96,11 @@
         <FadeUp>
           <div class="section-tag">{{ $t('about.geo_tag') }}</div>
           <h2 class="section-title">{{ $t('about.geo_h') }}</h2>
-          <p style="color:var(--muted);font-size:1rem;line-height:1.8;">{{ $t('about.geo_p') }}</p>
+          <p style="color:#CBD5E1;font-size:1rem;line-height:1.8;">{{ $t('about.geo_p') }}</p>
         </FadeUp>
         <FadeUp :delay="100">
           <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
-            <span v-for="country in countries" :key="country" style="display:inline-block;padding:.5rem 1.1rem;border:1px solid var(--border);font-size:.82rem;color:var(--muted);border-radius:2px;transition:border-color .2s,color .2s;" class="country-tag">{{ country }}</span>
+            <span v-for="country in countries" :key="country" style="display:inline-block;padding:.5rem 1.1rem;border:1px solid var(--border);font-size:.82rem;color:#CBD5E1;border-radius:2px;transition:border-color .2s,color .2s;" class="country-tag">{{ country }}</span>
           </div>
         </FadeUp>
       </div>
@@ -121,14 +121,14 @@
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
               </div>
               <h3 style="font-family:var(--font-h);font-weight:700;font-size:1.15rem;margin-bottom:.75rem;">{{ $t('about.b1h') }}</h3>
-              <p style="font-size:.88rem;color:var(--muted);line-height:1.7;">{{ $t('about.b1p') }}</p>
+              <p style="font-size:.88rem;color:#CBD5E1;line-height:1.7;">{{ $t('about.b1p') }}</p>
             </div>
             <div class="biz-card">
               <div style="width:48px;height:48px;border-radius:50%;background:var(--accent-subtle);border:1px solid var(--accent-20);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
               </div>
               <h3 style="font-family:var(--font-h);font-weight:700;font-size:1.15rem;margin-bottom:.75rem;">{{ $t('about.b2h') }}</h3>
-              <p style="font-size:.88rem;color:var(--muted);line-height:1.7;">{{ $t('about.b2p') }}</p>
+              <p style="font-size:.88rem;color:#CBD5E1;line-height:1.7;">{{ $t('about.b2p') }}</p>
             </div>
           </div>
         </FadeUp>
@@ -141,8 +141,8 @@
         <FadeUp>
           <div class="section-tag">{{ $t('about.team_tag') }}</div>
           <h2 class="section-title">{{ $t('about.team_h') }}</h2>
-          <p style="color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:1.5rem;">{{ $t('about.team_p1') }}</p>
-          <p style="color:var(--muted);font-size:1rem;line-height:1.8;">{{ $t('about.team_p2') }}</p>
+          <p style="color:#CBD5E1;font-size:1rem;line-height:1.8;margin-bottom:1.5rem;">{{ $t('about.team_p1') }}</p>
+          <p style="color:#CBD5E1;font-size:1rem;line-height:1.8;">{{ $t('about.team_p2') }}</p>
         </FadeUp>
         <FadeUp :delay="100">
           <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);">
@@ -154,7 +154,7 @@
               </div>
               <div>
                 <div style="font-family:var(--font-h);font-weight:700;font-size:.95rem;margin-bottom:.2rem;">{{ $t('about.team' + i + 'h') }}</div>
-                <div style="font-size:.82rem;color:var(--muted);line-height:1.5;">{{ $t('about.team' + i + 'p') }}</div>
+                <div style="font-size:.82rem;color:#CBD5E1;line-height:1.5;">{{ $t('about.team' + i + 'p') }}</div>
               </div>
             </div>
           </div>
@@ -168,7 +168,7 @@
       <FadeUp style="position:relative;z-index:1;max-width:600px;margin:0 auto;">
         <div class="section-tag" style="justify-content:center;">{{ $t('about.cta_tag') }}</div>
         <h2 class="section-title" style="font-size:clamp(2.5rem,5vw,4rem);margin-bottom:1.25rem;">{{ $t('about.cta_h') }}</h2>
-        <p style="color:var(--muted);font-size:1.05rem;margin-bottom:2.5rem;">{{ $t('about.cta_p') }}</p>
+        <p style="color:#CBD5E1;font-size:1.05rem;margin-bottom:2.5rem;">{{ $t('about.cta_p') }}</p>
         <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
           <router-link to="/contacts" class="btn btn-primary">{{ $t('about.cta_btn1') }}</router-link>
           <router-link to="/services" class="btn btn-outline">{{ $t('about.cta_btn2') }}</router-link>

@@ -9,7 +9,7 @@
           <span>{{ $t('developers.h1a') }}</span><br>
           <em style="color:var(--accent);font-style:normal;">{{ $t('developers.h1b') }}</em>
         </h1>
-        <p style="font-size:1.1rem;color:var(--muted);max-width:520px;margin-top:2rem;">{{ $t('developers.desc') }}</p>
+        <p style="font-size:1.1rem;color:#CBD5E1;max-width:520px;margin-top:2rem;">{{ $t('developers.desc') }}</p>
       </div>
     </section>
 
@@ -28,11 +28,11 @@
           </div>
         </FadeUp>
         <FadeUp :delay="100">
-          <p style="font-size:1.05rem;color:var(--muted);line-height:1.8;">We work with the best developers remotely. Fair pay, interesting projects, strict but fair standards. Join a team that takes quality seriously.</p>
+          <p style="font-size:1.05rem;color:#CBD5E1;line-height:1.8;">We work with the best developers remotely. Fair pay, interesting projects, strict but fair standards. Join a team that takes quality seriously.</p>
           <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
             <span style="padding:.4rem 1rem;border:1px solid rgba(79,142,255,.4);color:var(--accent);font-size:.8rem;border-radius:2px;">Remote First</span>
-            <span style="padding:.4rem 1rem;border:1px solid var(--border);color:var(--muted);font-size:.8rem;border-radius:2px;">Flexible Hours</span>
-            <span style="padding:.4rem 1rem;border:1px solid var(--border);color:var(--muted);font-size:.8rem;border-radius:2px;">Long-term Projects</span>
+            <span style="padding:.4rem 1rem;border:1px solid var(--border);color:#CBD5E1;font-size:.8rem;border-radius:2px;">Flexible Hours</span>
+            <span style="padding:.4rem 1rem;border:1px solid var(--border);color:#CBD5E1;font-size:.8rem;border-radius:2px;">Long-term Projects</span>
           </div>
         </FadeUp>
       </div>
@@ -63,7 +63,7 @@
       </FadeUp>
       <FadeUp>
         <div>
-          <span v-for="s in stacks" :key="s" style="display:inline-block;padding:.4rem .9rem;border:1px solid rgba(240,237,232,.12);font-size:.82rem;color:rgba(240,237,232,.6);border-radius:2px;margin:.3rem;">{{ s }}</span>
+          <span v-for="s in stacks" :key="s" style="display:inline-block;padding:.4rem .9rem;border:1px solid rgba(240,237,232,.12);font-size:.82rem;color:#CBD5E1;border-radius:2px;margin:.3rem;">{{ s }}</span>
         </div>
       </FadeUp>
     </section>
@@ -74,7 +74,7 @@
         <FadeUp>
           <div class="section-tag">{{ $t('developers.apply_tag') }}</div>
           <h2 class="section-title">{{ $t('developers.apply_h') }}</h2>
-          <p style="color:var(--muted);font-size:1rem;line-height:1.75;margin-top:1rem;">{{ $t('developers.apply_p') }}</p>
+          <p style="color:#CBD5E1;font-size:1rem;line-height:1.75;margin-top:1rem;">{{ $t('developers.apply_p') }}</p>
         </FadeUp>
         <FadeUp :delay="100">
           <form @submit.prevent="submitDevForm">

@@ -133,8 +133,8 @@
         <FadeUp>
           <div class="section-tag">{{ $t('home.pr_tag') }}</div>
           <h2 class="section-title" v-html="$t('home.pr_h').replace('\\n','<br>')"></h2>
-          <p style="color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:1rem;">{{ $t('home.pr_right1') }}</p>
-          <p style="color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:2rem;">{{ $t('home.pr_right2') }}</p>
+          <p style="color:#CBD5E1;font-size:1rem;line-height:1.75;margin-bottom:1rem;">{{ $t('home.pr_right1') }}</p>
+          <p style="color:#CBD5E1;font-size:1rem;line-height:1.75;margin-bottom:2rem;">{{ $t('home.pr_right2') }}</p>
           <router-link to="/contacts" class="btn btn-primary">{{ $t('home.pr_cta') }}</router-link>
         </FadeUp>
         <FadeUp :delay="100">
@@ -184,18 +184,18 @@
         <FadeUp>
           <div class="section-tag">{{ $t('home.dev_tag') }}</div>
           <h2 class="section-title">{{ $t('home.dev_h') }}</h2>
-          <p style="color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:2rem;">{{ $t('home.dev_p') }}</p>
+          <p style="color:#CBD5E1;font-size:1rem;line-height:1.75;margin-bottom:2rem;">{{ $t('home.dev_p') }}</p>
           <router-link to="/developers" class="btn btn-primary">{{ $t('home.dev_cta') }}</router-link>
         </FadeUp>
         <FadeUp :delay="100">
           <div class="dev-teaser-grid">
             <div style="background:var(--gray1);padding:2rem;text-align:center;">
               <div style="font-family:var(--font-h);font-size:2.5rem;font-weight:800;color:var(--accent);">$50</div>
-              <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:.5rem;">{{ $t('developers.rate_per') }}</div>
+              <div style="font-size:.75rem;color:#CBD5E1;text-transform:uppercase;letter-spacing:.1em;margin-top:.5rem;">{{ $t('developers.rate_per') }}</div>
             </div>
             <div style="background:var(--gray1);padding:2rem;text-align:center;">
               <div style="font-family:var(--font-h);font-size:2.5rem;font-weight:800;color:var(--white);">20+</div>
-              <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:.5rem;">Tech Stack</div>
+              <div style="font-size:.75rem;color:#CBD5E1;text-transform:uppercase;letter-spacing:.1em;margin-top:.5rem;">Tech Stack</div>
             </div>
           </div>
         </FadeUp>
@@ -208,7 +208,7 @@
       <div style="position:relative;z-index:1;max-width:640px;margin:0 auto;">
         <div class="section-tag" style="justify-content:center;">{{ $t('home.contact_tag') }}</div>
         <h2 class="section-title" style="font-size:clamp(2.5rem,6vw,5rem);margin-bottom:1.25rem;">{{ $t('home.contact_h') }}</h2>
-        <p style="color:var(--muted);font-size:1.05rem;margin-bottom:3rem;">{{ $t('home.contact_p') }}</p>
+        <p style="color:#CBD5E1;font-size:1.05rem;margin-bottom:3rem;">{{ $t('home.contact_p') }}</p>
         <form style="text-align:left;" @submit.prevent="submitHomeForm">
           <div class="form-row">
             <input type="text" v-model="homeForm.name" :placeholder="$t('home.f_name')" required>

@@ -10,7 +10,7 @@
           <span>{{ $t('contacts.h1b') }}</span><br>
           <em style="color:var(--accent);font-style:normal;">{{ $t('contacts.h1c') }}</em>
         </h1>
-        <p style="font-size:1.1rem;color:var(--muted);max-width:480px;margin-top:2rem;">{{ $t('contacts.desc') }}</p>
+        <p style="font-size:1.1rem;color:#CBD5E1;max-width:480px;margin-top:2rem;">{{ $t('contacts.desc') }}</p>
       </div>
     </section>
 
@@ -58,9 +58,9 @@
           </FadeUp>
           <FadeUp :delay="320">
             <div style="margin-top:3rem;padding:2rem;background:var(--gray1);border:1px solid var(--border);">
-              <div style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;">{{ $t('contacts.resp_label') }}</div>
+              <div style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#CBD5E1;margin-bottom:1rem;">{{ $t('contacts.resp_label') }}</div>
               <div style="font-family:var(--font-h);font-size:2rem;font-weight:800;color:var(--accent);">{{ $t('contacts.resp_time') }}</div>
-              <p style="font-size:.85rem;color:var(--muted);margin-top:.5rem;line-height:1.6;">{{ $t('contacts.resp_desc') }}</p>
+              <p style="font-size:.85rem;color:#CBD5E1;margin-top:.5rem;line-height:1.6;">{{ $t('contacts.resp_desc') }}</p>
             </div>
           </FadeUp>
         </div>
