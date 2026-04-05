@@ -14,7 +14,7 @@
     </section>
 
     <!-- Rate -->
-    <section class="section section-dark" style="padding:4rem 3.5rem;">
+    <section class="section section-dark">
       <div class="split">
         <FadeUp>
           <div class="pricing-box">

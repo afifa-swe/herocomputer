@@ -18,6 +18,7 @@
   </nav>
   <div class="mobile-menu" :class="{ open: menuOpen }">
     <router-link v-for="link in navLinks" :key="link.name" :to="link.path" @click="menuOpen = false">{{ $t('nav.' + link.name) }}</router-link>
+    <router-link to="/contacts" class="btn btn-primary mobile-menu-cta" @click="menuOpen = false">{{ $t('nav.cta') }}</router-link>
     <div class="mobile-menu-lang">
       <button v-for="lang in ['ru', 'en', 'az']" :key="lang" class="lang-btn" :class="{ active: locale === lang }" @click="setLang(lang)">{{ lang.toUpperCase() }}</button>
     </div>

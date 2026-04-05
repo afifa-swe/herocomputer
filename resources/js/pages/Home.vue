@@ -86,7 +86,7 @@
 
     <!-- SERVICES PREVIEW -->
     <section class="section section-dark">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;">
+      <div class="section-header">
         <FadeUp>
           <div class="section-tag">{{ $t('home.sv_tag') }}</div>
           <h2 class="section-title" v-html="$t('home.sv_h').replace('\\n','<br>')"></h2>
@@ -154,7 +154,7 @@
 
     <!-- CASES PREVIEW -->
     <section class="section">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;">
+      <div class="section-header">
         <FadeUp>
           <div class="section-tag">{{ $t('home.cs_tag') }}</div>
           <h2 class="section-title" v-html="$t('home.cs_h').replace('\\n','<br>')"></h2>
@@ -188,7 +188,7 @@
           <router-link to="/developers" class="btn btn-primary">{{ $t('home.dev_cta') }}</router-link>
         </FadeUp>
         <FadeUp :delay="100">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);">
+          <div class="dev-teaser-grid">
             <div style="background:var(--gray1);padding:2rem;text-align:center;">
               <div style="font-family:var(--font-h);font-size:2.5rem;font-weight:800;color:var(--accent-light);">$50</div>
               <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:.5rem;">{{ $t('developers.rate_per') }}</div>
@@ -203,7 +203,7 @@
     </section>
 
     <!-- CONTACT CTA -->
-    <section class="section section-dark" style="text-align:center;padding:8rem 3.5rem;position:relative;overflow:hidden;">
+    <section class="section section-dark section-cta">
       <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(27,94,59,.08) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:relative;z-index:1;max-width:640px;margin:0 auto;">
         <div class="section-tag" style="justify-content:center;">{{ $t('home.contact_tag') }}</div>

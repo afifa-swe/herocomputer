@@ -13,9 +13,9 @@
     </section>
 
     <!-- VISUAL -->
-    <section class="section section-dark" style="padding:4rem 3.5rem;">
+    <section class="section section-dark">
       <FadeUp>
-        <div style="width:100%;height:340px;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;"
+        <div class="case-detail-visual"
              :style="{ background: `linear-gradient(135deg, ${cs.color}, ${cs.color2})` }">
           <div style="font-family:var(--font-h);font-weight:800;letter-spacing:.15em;opacity:.15;"
                :style="{ fontSize: cs.label.length > 10 ? '3rem' : '5rem', color: cs.textColor || 'rgba(255,255,255,.3)' }">
@@ -92,7 +92,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="section section-dark" style="text-align:center;padding:6rem 3.5rem;">
+    <section class="section section-dark section-cta">
       <FadeUp>
         <div class="section-tag" style="justify-content:center;">{{ $t('case_detail.cta_tag') }}</div>
         <h2 class="section-title" style="margin-bottom:1.5rem;">{{ $t('case_detail.cta_h') }}</h2>

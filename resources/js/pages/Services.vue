@@ -45,7 +45,7 @@
       </FadeUp>
     </section>
 
-    <section class="section" style="text-align:center;padding:8rem 3.5rem;">
+    <section class="section section-cta">
       <FadeUp style="max-width:600px;margin:0 auto;">
         <div class="section-tag" style="justify-content:center;">{{ $t('services.cta_tag') }}</div>
         <h2 class="section-title" style="font-size:clamp(2.5rem,5vw,4.5rem);" v-html="$t('services.cta_h').replace('\\n','<br>')"></h2>

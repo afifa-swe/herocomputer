@@ -16,7 +16,7 @@
     </section>
 
     <!-- STATS -->
-    <section class="section section-dark" style="padding:5rem 3.5rem;">
+    <section class="section section-dark">
       <FadeUp>
         <div class="grid-4" style="border:1px solid var(--border);">
           <div v-for="(stat, idx) in stats" :key="idx" class="card card-dark" style="text-align:center;padding:3rem 1.5rem;">
@@ -116,14 +116,14 @@
         </FadeUp>
         <FadeUp :delay="100">
           <div class="grid-2">
-            <div style="padding:3rem 2.5rem;background:var(--gray1);border:1px solid var(--border);">
+            <div class="biz-card">
               <div style="width:48px;height:48px;border-radius:50%;background:var(--accent-subtle);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
               </div>
               <h3 style="font-family:var(--font-h);font-weight:700;font-size:1.15rem;margin-bottom:.75rem;">{{ $t('about.b1h') }}</h3>
               <p style="font-size:.88rem;color:var(--muted);line-height:1.7;">{{ $t('about.b1p') }}</p>
             </div>
-            <div style="padding:3rem 2.5rem;background:var(--gray1);border:1px solid var(--border);">
+            <div class="biz-card">
               <div style="width:48px;height:48px;border-radius:50%;background:var(--accent-subtle);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
               </div>
@@ -163,7 +163,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="section" style="text-align:center;padding:8rem 3.5rem;position:relative;overflow:hidden;">
+    <section class="section section-cta">
       <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(27,94,59,.08) 0%,transparent 60%);pointer-events:none;"></div>
       <FadeUp style="position:relative;z-index:1;max-width:600px;margin:0 auto;">
         <div class="section-tag" style="justify-content:center;">{{ $t('about.cta_tag') }}</div>

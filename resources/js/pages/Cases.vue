@@ -31,7 +31,7 @@
       </FadeUp>
     </section>
 
-    <section class="section section-dark" style="text-align:center;padding:7rem 3.5rem;">
+    <section class="section section-dark section-cta">
       <FadeUp style="max-width:560px;margin:0 auto;">
         <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.5rem);">{{ $t('cases.cta_h') }}</h2>
         <p style="color:var(--muted);font-size:1rem;margin:1.25rem 0 2.5rem;">{{ $t('cases.cta_p') }}</p>
