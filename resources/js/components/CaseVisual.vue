@@ -89,6 +89,150 @@
       </div>
     </div>
 
+    <!-- PayFlow -->
+    <div v-else-if="visualType === 'payflow'" class="cv-inner payflow-content">
+      <div class="cv-phone dark-phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="pf-balance">$12,450</div>
+          <div class="pf-label">баланс</div>
+          <div class="pf-card">
+            <div class="pf-card-num">•••• 4821</div>
+            <div class="pf-card-logo">VISA</div>
+          </div>
+          <div class="pf-rows">
+            <div class="pf-row"><div class="pf-dot g"></div><div class="pf-line" style="width:65%"></div><div class="pf-amt g">+$230</div></div>
+            <div class="pf-row"><div class="pf-dot r"></div><div class="pf-line" style="width:50%"></div><div class="pf-amt r">-$45</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cv-stats">
+        <div class="cv-stat emerald"><span class="num">50K+</span><span class="lbl">транзакций</span></div>
+        <div class="cv-stat emerald"><span class="num">12ms</span><span class="lbl">скорость</span></div>
+        <div class="cv-stat emerald"><span class="num">PCI DSS</span><span class="lbl">сертификат</span></div>
+      </div>
+    </div>
+
+    <!-- CargoTrack -->
+    <div v-else-if="visualType === 'cargotrack'" class="cv-inner cargo-content">
+      <div class="cargo-map">
+        <div class="cargo-map-bg">
+          <div class="cargo-route">
+            <div class="cargo-city a">AZ</div>
+            <div class="cargo-path">
+              <div class="cargo-dot moving"></div>
+            </div>
+            <div class="cargo-city b">DE</div>
+          </div>
+          <div class="cargo-grid"></div>
+        </div>
+      </div>
+      <div class="cv-stats">
+        <div class="cv-stat amber"><span class="num">98%</span><span class="lbl">точность</span></div>
+        <div class="cv-stat amber"><span class="num">GPS</span><span class="lbl">реал. время</span></div>
+        <div class="cv-stat amber"><span class="num">500+</span><span class="lbl">маршрутов</span></div>
+      </div>
+    </div>
+
+    <!-- Bazario -->
+    <div v-else-if="visualType === 'bazario'" class="cv-inner bazario-content">
+      <div class="cv-phone dark-phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="baz-header">Bazario</div>
+          <div class="baz-grid">
+            <div class="baz-item"><div class="baz-img"></div><div class="baz-price">$24</div></div>
+            <div class="baz-item"><div class="baz-img accent"></div><div class="baz-price">$18</div></div>
+            <div class="baz-item"><div class="baz-img"></div><div class="baz-price">$32</div></div>
+            <div class="baz-item"><div class="baz-img dark"></div><div class="baz-price">$55</div></div>
+          </div>
+          <div class="baz-btn">В корзину</div>
+        </div>
+      </div>
+      <div class="cv-stats">
+        <div class="cv-stat rose"><span class="num">5K+</span><span class="lbl">продавцов</span></div>
+        <div class="cv-stat rose"><span class="num">Stripe</span><span class="lbl">платежи</span></div>
+        <div class="cv-stat rose"><span class="num">RT чат</span><span class="lbl">поддержка</span></div>
+      </div>
+    </div>
+
+    <!-- PropDesk -->
+    <div v-else-if="visualType === 'propdesk'" class="cv-inner propdesk-content">
+      <div class="prop-screen">
+        <div class="prop-header">PropDesk CRM</div>
+        <div class="prop-card">
+          <div class="prop-card-img"></div>
+          <div class="prop-card-info">
+            <div class="prop-addr"></div>
+            <div class="prop-price">$285,000</div>
+            <div class="prop-tags">
+              <div class="prop-tag">3 комн</div>
+              <div class="prop-tag">78м²</div>
+            </div>
+          </div>
+        </div>
+        <div class="prop-leads">
+          <div class="prop-lead-item"><div class="prop-avatar a">АК</div><div class="prop-lead-line"></div></div>
+          <div class="prop-lead-item"><div class="prop-avatar b">МЛ</div><div class="prop-lead-line short"></div></div>
+        </div>
+      </div>
+      <div class="cv-stats">
+        <div class="cv-stat violet"><span class="num">CRM</span><span class="lbl">платформа</span></div>
+        <div class="cv-stat violet"><span class="num">360°</span><span class="lbl">вирт. тур</span></div>
+        <div class="cv-stat violet"><span class="num">AWS S3</span><span class="lbl">хранение</span></div>
+      </div>
+    </div>
+
+    <!-- FreshBox -->
+    <div v-else-if="visualType === 'freshbox'" class="cv-inner freshbox-content">
+      <div class="cv-phone dark-phone" style="background:#061008;border-color:rgba(34,197,94,0.15)">
+        <div class="phone-notch"></div>
+        <div class="phone-screen" style="background:#040c06">
+          <div class="fb-logo">Fresh<span>Box</span></div>
+          <div class="fb-box">
+            <div class="fb-item">🥦</div>
+            <div class="fb-item">🍎</div>
+            <div class="fb-item">🥕</div>
+          </div>
+          <div class="fb-timer">⏱ 45 мин</div>
+          <div class="fb-bar"><div class="fb-fill"></div></div>
+          <div class="fb-btn-g">Заказать бокс</div>
+        </div>
+      </div>
+      <div class="cv-stats">
+        <div class="cv-stat fresh"><span class="num">45 мин</span><span class="lbl">доставка</span></div>
+        <div class="cv-stat fresh"><span class="num">100+</span><span class="lbl">ферм</span></div>
+        <div class="cv-stat fresh"><span class="num">⭐ 4.8</span><span class="lbl">рейтинг</span></div>
+      </div>
+    </div>
+
+    <!-- TeamPulse -->
+    <div v-else-if="visualType === 'teampulse'" class="cv-inner teampulse-content">
+      <div class="tp-screen">
+        <div class="tp-header">TeamPulse</div>
+        <div class="tp-chart">
+          <div class="tp-bar" style="height:40%"></div>
+          <div class="tp-bar" style="height:70%"></div>
+          <div class="tp-bar accent" style="height:90%"></div>
+          <div class="tp-bar" style="height:55%"></div>
+          <div class="tp-bar" style="height:80%"></div>
+        </div>
+        <div class="tp-score">
+          <div class="tp-score-num">87<span>%</span></div>
+          <div class="tp-score-lbl">вовлечённость</div>
+        </div>
+        <div class="tp-teams">
+          <div class="tp-team"><div class="tp-av o">DE</div><div class="tp-tl"></div></div>
+          <div class="tp-team"><div class="tp-av b">HR</div><div class="tp-tl short"></div></div>
+        </div>
+      </div>
+      <div class="cv-stats">
+        <div class="cv-stat orange"><span class="num">OKR</span><span class="lbl">трекинг</span></div>
+        <div class="cv-stat orange"><span class="num">360°</span><span class="lbl">обратная связь</span></div>
+        <div class="cv-stat orange"><span class="num">Slack</span><span class="lbl">интеграция</span></div>
+      </div>
+    </div>
+
     <!-- Дефолт — для всех остальных кейсов -->
     <div v-else class="cv-inner cv-default">
       <div class="cv-default-label">{{ label }}</div>
@@ -118,6 +262,12 @@ const visualTypeMap = {
   'rx+': 'pharmacy',
   web3: 'web3',
   'no there, there': 'web3',
+  payflow: 'payflow',
+  cargotrack: 'cargotrack',
+  bazario: 'bazario',
+  propdesk: 'propdesk',
+  freshbox: 'freshbox',
+  teampulse: 'teampulse',
 }
 
 const visualType = visualTypeMap[props.type?.toLowerCase()] || 'default'
@@ -151,10 +301,18 @@ const visualType = visualTypeMap[props.type?.toLowerCase()] || 'default'
 .olalearn-visual { background: linear-gradient(135deg, #030d1a 0%, #061628 60%, #0a2040 100%); }
 .web3-visual     { background: linear-gradient(135deg, #08030f 0%, #130820 60%, #1e0a35 100%); }
 .pharmacy-visual { background: linear-gradient(135deg, #f0f8ff 0%, #e8f4fd 50%, #dff0fa 100%); }
+.payflow-visual   { background: linear-gradient(135deg, #021a0e 0%, #042d14 50%, #065c22 100%); }
+.cargotrack-visual { background: linear-gradient(135deg, #0d1206 0%, #1a2008 50%, #2d3a0a 100%); }
+.bazario-visual  { background: linear-gradient(135deg, #1a0608 0%, #2d0a0e 50%, #4a0f14 100%); }
+.propdesk-visual { background: linear-gradient(135deg, #0d0618 0%, #1a0d2e 50%, #2d1a4e 100%); }
+.freshbox-visual { background: linear-gradient(135deg, #021206 0%, #042010 50%, #065c22 100%); }
+.teampulse-visual { background: linear-gradient(135deg, #150a02 0%, #2a1204 50%, #3d1a06 100%); }
 .default-visual  { background: linear-gradient(135deg, v-bind(color) 0%, v-bind(color2) 100%); }
 
 /* Свечения */
-.vieon-visual::after, .olalearn-visual::after, .web3-visual::after, .default-visual::after {
+.vieon-visual::after, .olalearn-visual::after, .web3-visual::after, .default-visual::after,
+.payflow-visual::after, .cargotrack-visual::after, .bazario-visual::after,
+.propdesk-visual::after, .freshbox-visual::after, .teampulse-visual::after {
   content: '';
   position: absolute;
   width: 160px; height: 160px;
@@ -162,10 +320,16 @@ const visualType = visualTypeMap[props.type?.toLowerCase()] || 'default'
   border-radius: 50%;
   pointer-events: none;
 }
-.vieon-visual::after    { background: radial-gradient(circle, rgba(79,142,255,0.18) 0%, transparent 70%); }
-.olalearn-visual::after { background: radial-gradient(circle, rgba(6,182,212,0.15) 0%, transparent 70%); }
-.web3-visual::after     { background: radial-gradient(circle, rgba(168,85,247,0.15) 0%, transparent 70%); }
-.default-visual::after  { background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%); }
+.vieon-visual::after     { background: radial-gradient(circle, rgba(79,142,255,0.18) 0%, transparent 70%); }
+.olalearn-visual::after  { background: radial-gradient(circle, rgba(6,182,212,0.15) 0%, transparent 70%); }
+.web3-visual::after      { background: radial-gradient(circle, rgba(168,85,247,0.15) 0%, transparent 70%); }
+.payflow-visual::after   { background: radial-gradient(circle, rgba(16,185,129,0.2) 0%, transparent 70%); }
+.cargotrack-visual::after { background: radial-gradient(circle, rgba(202,138,4,0.18) 0%, transparent 70%); }
+.bazario-visual::after   { background: radial-gradient(circle, rgba(225,29,72,0.15) 0%, transparent 70%); }
+.propdesk-visual::after  { background: radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 70%); }
+.freshbox-visual::after  { background: radial-gradient(circle, rgba(34,197,94,0.18) 0%, transparent 70%); }
+.teampulse-visual::after { background: radial-gradient(circle, rgba(234,88,12,0.18) 0%, transparent 70%); }
+.default-visual::after   { background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%); }
 .pharmacy-visual::after {
   content: '';
   position: absolute;
@@ -258,6 +422,12 @@ const visualType = visualTypeMap[props.type?.toLowerCase()] || 'default'
 .cv-stat.green .lbl { color: #22c55e; }
 .cv-stat.green .num { color: #1e293b; }
 .cv-stat.purple .lbl { color: #a855f7; }
+.cv-stat.emerald .lbl { color: #10b981; }
+.cv-stat.amber .lbl { color: #f59e0b; }
+.cv-stat.rose .lbl { color: #fb7185; }
+.cv-stat.violet .lbl { color: #a78bfa; }
+.cv-stat.fresh .lbl { color: #4ade80; }
+.cv-stat.orange .lbl { color: #fb923c; }
 .pharmacy-visual .cv-stats .num { color: #1e293b; }
 
 /* OlaLearn */
@@ -291,6 +461,194 @@ const visualType = visualTypeMap[props.type?.toLowerCase()] || 'default'
 .nline { width: 20px; height: 1px; background: rgba(168,85,247,0.3); }
 .nlabel { font-size: 9px; color: #94a3b8; }
 
+/* PayFlow */
+.payflow-content { display: flex; align-items: center; gap: 16px; z-index: 2; position: relative; }
+.pf-balance { font-size: 14px; font-weight: 800; color: #10b981; }
+.pf-label { font-size: 7px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; }
+.pf-card {
+  width: 58px; height: 32px;
+  background: linear-gradient(135deg, #065f46, #047857);
+  border-radius: 4px;
+  border: 1px solid rgba(16,185,129,0.3);
+  display: flex; align-items: flex-end;
+  justify-content: space-between;
+  padding: 4px;
+}
+.pf-card-num { font-size: 6px; color: rgba(255,255,255,0.6); }
+.pf-card-logo { font-size: 7px; font-weight: 800; color: #fff; font-style: italic; }
+.pf-rows { width: 100%; padding: 0 4px; display: flex; flex-direction: column; gap: 3px; }
+.pf-row { display: flex; align-items: center; gap: 3px; }
+.pf-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+.pf-dot.g { background: #10b981; }
+.pf-dot.r { background: #ef4444; }
+.pf-line { height: 2px; background: rgba(255,255,255,0.08); border-radius: 1px; flex: 1; }
+.pf-amt { font-size: 7px; font-weight: 700; }
+.pf-amt.g { color: #10b981; }
+.pf-amt.r { color: #ef4444; }
+
+/* CargoTrack */
+.cargo-content { display: flex; align-items: center; gap: 16px; z-index: 2; position: relative; }
+.cargo-map {
+  width: 120px; height: 100px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  border: 1px solid rgba(202,138,4,0.2);
+  overflow: hidden; position: relative; flex-shrink: 0;
+}
+.cargo-map-bg {
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 14px, rgba(202,138,4,0.05) 14px, rgba(202,138,4,0.05) 15px
+  ),
+  repeating-linear-gradient(
+    90deg, transparent, transparent 14px, rgba(202,138,4,0.05) 14px, rgba(202,138,4,0.05) 15px
+  );
+  display: flex; align-items: center; justify-content: center;
+}
+.cargo-route { display: flex; align-items: center; gap: 6px; }
+.cargo-city {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 7px; font-weight: 800;
+}
+.cargo-city.a { background: rgba(202,138,4,0.3); border: 1px solid #ca8a04; color: #fbbf24; }
+.cargo-city.b { background: rgba(79,142,255,0.3); border: 1px solid #4F8EFF; color: #93c5fd; }
+.cargo-path {
+  flex: 1; height: 2px;
+  background: rgba(202,138,4,0.3);
+  border-radius: 1px;
+  position: relative;
+}
+.cargo-dot {
+  width: 6px; height: 6px;
+  background: #fbbf24;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  animation: moveCargo 2s linear infinite;
+  box-shadow: 0 0 6px #fbbf24;
+}
+@keyframes moveCargo {
+  0% { left: 0; }
+  100% { left: calc(100% - 6px); }
+}
+
+/* Bazario */
+.bazario-content { display: flex; align-items: center; gap: 16px; z-index: 2; position: relative; }
+.baz-header { font-size: 9px; font-weight: 800; color: #fb7185; letter-spacing: 0.1em; }
+.baz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; width: 100%; padding: 0 2px; }
+.baz-item { display: flex; flex-direction: column; gap: 2px; }
+.baz-img { height: 22px; border-radius: 3px; background: rgba(255,255,255,0.06); }
+.baz-img.accent { background: rgba(225,29,72,0.2); }
+.baz-img.dark { background: rgba(255,255,255,0.03); }
+.baz-price { font-size: 7px; font-weight: 700; color: #fb7185; }
+.baz-btn {
+  background: #e11d48; color: #fff;
+  font-size: 7px; font-weight: 700;
+  border-radius: 4px; padding: 4px 0;
+  text-align: center; width: 100%;
+}
+
+/* PropDesk */
+.propdesk-content { display: flex; align-items: center; gap: 16px; z-index: 2; position: relative; }
+.prop-screen {
+  width: 120px; height: 150px;
+  background: #0f0a1e;
+  border-radius: 10px;
+  border: 1px solid rgba(139,92,246,0.2);
+  padding: 8px; flex-shrink: 0;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.prop-header { font-size: 8px; font-weight: 700; color: #a78bfa; letter-spacing: 0.08em; }
+.prop-card { display: flex; gap: 6px; }
+.prop-card-img {
+  width: 38px; height: 38px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(109,40,217,0.2));
+  border: 1px solid rgba(139,92,246,0.15);
+  flex-shrink: 0;
+}
+.prop-card-info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.prop-addr { height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px; width: 80%; }
+.prop-price { font-size: 8px; font-weight: 800; color: #c4b5fd; }
+.prop-tags { display: flex; gap: 3px; }
+.prop-tag {
+  font-size: 6px; color: #a78bfa;
+  background: rgba(139,92,246,0.1);
+  border-radius: 3px; padding: 1px 4px;
+}
+.prop-leads { display: flex; flex-direction: column; gap: 5px; }
+.prop-lead-item { display: flex; align-items: center; gap: 5px; }
+.prop-avatar {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  display: flex; align-items: center;
+  justify-content: center;
+  font-size: 5px; font-weight: 700;
+  flex-shrink: 0;
+}
+.prop-avatar.a { background: rgba(139,92,246,0.3); color: #c4b5fd; }
+.prop-avatar.b { background: rgba(79,142,255,0.3); color: #93c5fd; }
+.prop-lead-line { flex: 1; height: 2px; background: rgba(255,255,255,0.07); border-radius: 1px; }
+.prop-lead-line.short { width: 60%; flex: none; }
+
+/* FreshBox */
+.freshbox-content { display: flex; align-items: center; gap: 16px; z-index: 2; position: relative; }
+.fb-logo { font-size: 9px; font-weight: 800; color: #4ade80; }
+.fb-logo span { color: #86efac; }
+.fb-box { display: flex; gap: 4px; justify-content: center; font-size: 14px; }
+.fb-timer { font-size: 7px; color: #4ade80; font-weight: 600; }
+.fb-bar {
+  width: 100%; height: 3px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px; overflow: hidden;
+  padding: 0 4px;
+}
+.fb-fill { width: 70%; height: 100%; background: #22c55e; border-radius: 2px; }
+.fb-btn-g {
+  background: #16a34a; color: #fff;
+  font-size: 6px; font-weight: 700;
+  border-radius: 4px; padding: 4px 0;
+  text-align: center; width: 100%;
+}
+
+/* TeamPulse */
+.teampulse-content { display: flex; align-items: center; gap: 16px; z-index: 2; position: relative; }
+.tp-screen {
+  width: 120px; height: 150px;
+  background: #1c0e04;
+  border-radius: 10px;
+  border: 1px solid rgba(234,88,12,0.2);
+  padding: 8px; flex-shrink: 0;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.tp-header { font-size: 8px; font-weight: 700; color: #fb923c; letter-spacing: 0.08em; }
+.tp-chart { display: flex; align-items: flex-end; gap: 3px; height: 40px; padding: 0 2px; }
+.tp-bar {
+  flex: 1; background: rgba(234,88,12,0.2);
+  border-radius: 2px 2px 0 0;
+  transition: height 0.3s;
+}
+.tp-bar.accent { background: #ea580c; }
+.tp-score { display: flex; align-items: baseline; gap: 4px; }
+.tp-score-num { font-size: 18px; font-weight: 800; color: #fff; line-height: 1; }
+.tp-score-num span { font-size: 10px; color: #fb923c; }
+.tp-score-lbl { font-size: 7px; color: rgba(255,255,255,0.4); }
+.tp-teams { display: flex; flex-direction: column; gap: 4px; }
+.tp-team { display: flex; align-items: center; gap: 5px; }
+.tp-av {
+  width: 14px; height: 14px;
+  border-radius: 50%; font-size: 5px;
+  font-weight: 700; display: flex;
+  align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.tp-av.o { background: rgba(234,88,12,0.3); color: #fb923c; }
+.tp-av.b { background: rgba(79,142,255,0.3); color: #93c5fd; }
+.tp-tl { flex: 1; height: 2px; background: rgba(255,255,255,0.07); border-radius: 1px; }
+.tp-tl.short { width: 55%; flex: none; }
+
 /* Дефолт */
 .cv-default {
   flex-direction: column;
@@ -323,5 +681,8 @@ const visualType = visualTypeMap[props.type?.toLowerCase()] || 'default'
   .dark-phone, .light-phone { width: 65px; height: 120px; }
   .cv-stat .num { font-size: 14px; }
   .ola-screen { width: 85px; height: 120px; }
+  .cargo-map { width: 90px; height: 80px; }
+  .prop-screen { width: 95px; height: 120px; }
+  .tp-screen { width: 95px; height: 120px; }
 }
 </style>

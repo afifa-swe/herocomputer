@@ -50,7 +50,7 @@ import CaseVisual from '../components/CaseVisual.vue';
 const { tm } = useI18n();
 const casesList = computed(() => tm('cases.cases_list') || []);
 
-const visualTypes = ['vieon', 'web3', 'pharmacy', 'olalearn'];
+const visualTypes = ['vieon', 'web3', 'pharmacy', 'olalearn', 'payflow', 'cargotrack', 'bazario', 'propdesk', 'freshbox', 'teampulse'];
 function getVisualType(idx) {
   return visualTypes[idx] || 'default';
 }

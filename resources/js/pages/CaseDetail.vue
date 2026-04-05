@@ -108,7 +108,7 @@ import CaseVisual from '../components/CaseVisual.vue';
 const route = useRoute();
 const { tm } = useI18n();
 
-const visualTypes = ['vieon', 'web3', 'pharmacy', 'olalearn'];
+const visualTypes = ['vieon', 'web3', 'pharmacy', 'olalearn', 'payflow', 'cargotrack', 'bazario', 'propdesk', 'freshbox', 'teampulse'];
 const caseId = computed(() => parseInt(route.params.id));
 
 const cs = computed(() => {
