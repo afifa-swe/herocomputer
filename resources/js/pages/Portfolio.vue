@@ -36,7 +36,11 @@
             <div class="case-arrow">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <CaseVisual :type="item.visual" :label="item.cs.label" :color="item.cs.color" :color2="item.cs.color2" />
+            <div v-if="item.preview" class="portfolio-preview">
+              <img :src="item.preview" :alt="item.cs.h" class="portfolio-preview-img" />
+              <span class="portfolio-badge">{{ item.slidesCount }} фото</span>
+            </div>
+            <div v-else class="no-slides-placeholder"><span>Скоро появятся фото</span></div>
             <div class="case-tag">{{ item.cs.tag }}</div>
             <h3>{{ item.cs.h }}</h3>
             <p>{{ item.cs.p }}</p>
@@ -69,8 +73,17 @@ import CaseVisual from '../components/CaseVisual.vue';
 const { t, tm } = useI18n();
 const casesList = computed(() => tm('cases.cases_list') || []);
 
-const visualTypes = ['vieon', 'web3', 'pharmacy', 'olalearn', 'payflow', 'cargotrack', 'bazario', 'propdesk', 'freshbox', 'teampulse'];
-const caseTypes = ['mobile', 'web3', 'mobile', 'web', 'mobile', 'web', 'mobile', 'web', 'mobile', 'web'];
+const visualTypes = ['vieon', 'pharmacy', 'olalearn', 'bazario', 'freshbox', 'rezume'];
+const caseTypes = ['mobile', 'mobile', 'web', 'mobile', 'mobile', 'design'];
+
+const portfolioSlides = {
+  0: { slug: 'vieon', count: 10 },
+  1: { slug: 'pharmacy', count: 10 },
+  2: { slug: 'olalearn', count: 10 },
+  3: { slug: 'octosells', count: 11 },
+  4: { slug: 'zaymekspress', count: 10 },
+  5: { slug: 'rezume', count: 10 },
+};
 
 const activeFilter = ref('all');
 
@@ -84,12 +97,17 @@ const filters = computed(() => [
 ]);
 
 const allCases = computed(() =>
-  casesList.value.map((cs, idx) => ({
-    cs,
-    idx,
-    visual: visualTypes[idx] || 'default',
-    type: caseTypes[idx] || 'web',
-  }))
+  casesList.value.map((cs, idx) => {
+    const slides = portfolioSlides[idx];
+    return {
+      cs,
+      idx,
+      visual: visualTypes[idx] || 'default',
+      type: caseTypes[idx] || 'web',
+      preview: slides ? `/images/portfolio/slides/${slides.slug}_0.png` : null,
+      slidesCount: slides ? slides.count : 0,
+    };
+  })
 );
 
 const filteredCases = computed(() => {
@@ -156,6 +174,49 @@ function setFilter(val) {
 }
 .portfolio-card-move {
   transition: transform .35s ease;
+}
+
+.portfolio-preview {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+  background: #0a0a14;
+}
+.portfolio-preview-img {
+  width: 100%;
+  height: clamp(200px, 30vw, 300px);
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.no-slides-placeholder {
+  width: 100%;
+  height: 260px;
+  background: #0F0F1A;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 1.75rem;
+}
+.portfolio-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(8,8,16,0.75);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(79,142,255,0.2);
+  border-radius: 100px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4F8EFF;
+  letter-spacing: 0.03em;
 }
 
 @media (max-width: 1024px) {

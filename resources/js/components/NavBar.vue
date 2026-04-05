@@ -38,10 +38,10 @@ const menuOpen = ref(false);
 
 const navLinks = [
   { name: 'home', path: '/' },
+  { name: 'portfolio', path: '/portfolio' },
   { name: 'about', path: '/about' },
   { name: 'services', path: '/services' },
   { name: 'cases', path: '/cases' },
-  { name: 'portfolio', path: '/portfolio' },
   { name: 'developers', path: '/developers' },
   { name: 'contacts', path: '/contacts' },
 ];

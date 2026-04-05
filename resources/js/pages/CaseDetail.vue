@@ -12,10 +12,11 @@
       </div>
     </section>
 
-    <!-- VISUAL -->
+    <!-- VISUAL / SLIDER -->
     <section class="section section-dark">
       <FadeUp>
-        <CaseVisual :type="visualType" :label="cs.label" :color="cs.color" :color2="cs.color2" style="height:clamp(260px,40vw,400px);border-radius:12px;" />
+        <PortfolioSlider v-if="slideImages.length" :images="slideImages" />
+        <div v-else class="no-slides-placeholder"><span>Скоро появятся фото</span></div>
       </FadeUp>
     </section>
 
@@ -104,11 +105,12 @@ import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import FadeUp from '../components/FadeUp.vue';
 import CaseVisual from '../components/CaseVisual.vue';
+import PortfolioSlider from '../components/PortfolioSlider.vue';
 
 const route = useRoute();
 const { tm } = useI18n();
 
-const visualTypes = ['vieon', 'web3', 'pharmacy', 'olalearn', 'payflow', 'cargotrack', 'bazario', 'propdesk', 'freshbox', 'teampulse'];
+const visualTypes = ['vieon', 'pharmacy', 'olalearn', 'bazario', 'freshbox', 'rezume'];
 const caseId = computed(() => parseInt(route.params.id));
 
 const cs = computed(() => {
@@ -117,6 +119,21 @@ const cs = computed(() => {
 });
 
 const visualType = computed(() => visualTypes[caseId.value] || 'default');
+
+const portfolioSlides = {
+  0: { slug: 'vieon', count: 10 },
+  1: { slug: 'pharmacy', count: 10 },
+  2: { slug: 'olalearn', count: 10 },
+  3: { slug: 'octosells', count: 11 },
+  4: { slug: 'zaymekspress', count: 10 },
+  5: { slug: 'rezume', count: 10 },
+};
+
+const slideImages = computed(() => {
+  const entry = portfolioSlides[caseId.value];
+  if (!entry) return [];
+  return Array.from({ length: entry.count }, (_, i) => `/images/portfolio/slides/${entry.slug}_${i}.png`);
+});
 
 function parseList(str) {
   if (!str) return [];
