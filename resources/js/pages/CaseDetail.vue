@@ -110,7 +110,7 @@ import PortfolioSlider from '../components/PortfolioSlider.vue';
 const route = useRoute();
 const { tm } = useI18n();
 
-const visualTypes = ['vieon', 'pharmacy', 'olalearn', 'bazario', 'freshbox', 'rezume'];
+const visualTypes = ['vieon', 'pharmacy', 'olalearn', 'octosells', 'zaymekspress'];
 const caseId = computed(() => parseInt(route.params.id));
 
 const cs = computed(() => {
@@ -126,7 +126,6 @@ const portfolioSlides = {
   2: { slug: 'olalearn', count: 10 },
   3: { slug: 'octosells', count: 11 },
   4: { slug: 'zaymekspress', count: 10 },
-  5: { slug: 'rezume', count: 10 },
 };
 
 const slideImages = computed(() => {

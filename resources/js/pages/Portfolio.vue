@@ -73,8 +73,8 @@ import CaseVisual from '../components/CaseVisual.vue';
 const { t, tm } = useI18n();
 const casesList = computed(() => tm('cases.cases_list') || []);
 
-const visualTypes = ['vieon', 'pharmacy', 'olalearn', 'bazario', 'freshbox', 'rezume'];
-const caseTypes = ['mobile', 'mobile', 'web', 'mobile', 'mobile', 'design'];
+const visualTypes = ['vieon', 'pharmacy', 'olalearn', 'octosells', 'zaymekspress'];
+const caseTypes = ['mobile', 'mobile', 'web', 'mobile', 'mobile'];
 
 const portfolioSlides = {
   0: { slug: 'vieon', count: 10 },
@@ -82,7 +82,6 @@ const portfolioSlides = {
   2: { slug: 'olalearn', count: 10 },
   3: { slug: 'octosells', count: 11 },
   4: { slug: 'zaymekspress', count: 10 },
-  5: { slug: 'rezume', count: 10 },
 };
 
 const activeFilter = ref('all');
@@ -93,7 +92,6 @@ const filters = computed(() => [
   { value: 'mobile', label: t('portfolio.filter_mobile') },
   { value: 'backend', label: t('portfolio.filter_backend') },
   { value: 'web3', label: t('portfolio.filter_web3') },
-  { value: 'design', label: t('portfolio.filter_design') },
 ]);
 
 const allCases = computed(() =>

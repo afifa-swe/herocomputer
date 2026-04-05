@@ -17,15 +17,18 @@
     <section class="section">
       <FadeUp>
         <div class="cases-grid">
-          <router-link v-for="(cs, idx) in casesList" :key="idx" :to="'/cases/' + idx" class="case-card" style="display:block;text-decoration:none;color:inherit;">
+          <router-link v-for="(item, idx) in casesWithPhotos" :key="idx" :to="'/cases/' + idx" class="case-card" style="display:block;text-decoration:none;color:inherit;">
             <div class="case-arrow">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <CaseVisual :type="getVisualType(idx)" :label="cs.label" :color="cs.color" :color2="cs.color2" />
-            <div class="case-tag">{{ cs.tag }}</div>
-            <h3>{{ cs.h }}</h3>
-            <p>{{ cs.p }}</p>
-            <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;letter-spacing:.1em;color:#CBD5E1;text-transform:uppercase;">{{ cs.tech }}</div>
+            <div v-if="item.preview" class="cases-preview">
+              <img :src="item.preview" :alt="item.cs.h" class="cases-preview-img" />
+              <span class="cases-badge">{{ item.slidesCount }} {{ $t('home.photos_label') }}</span>
+            </div>
+            <div class="case-tag">{{ item.cs.tag }}</div>
+            <h3>{{ item.cs.h }}</h3>
+            <p>{{ item.cs.p }}</p>
+            <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;letter-spacing:.1em;color:#CBD5E1;text-transform:uppercase;">{{ item.cs.tech }}</div>
           </router-link>
         </div>
       </FadeUp>
@@ -45,13 +48,75 @@
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import FadeUp from '../components/FadeUp.vue';
-import CaseVisual from '../components/CaseVisual.vue';
 
 const { tm } = useI18n();
 const casesList = computed(() => tm('cases.cases_list') || []);
 
-const visualTypes = ['vieon', 'web3', 'pharmacy', 'olalearn', 'payflow', 'cargotrack', 'bazario', 'propdesk', 'freshbox', 'teampulse'];
-function getVisualType(idx) {
-  return visualTypes[idx] || 'default';
-}
+const portfolioSlides = {
+  0: { slug: 'vieon', count: 10 },
+  1: { slug: 'pharmacy', count: 10 },
+  2: { slug: 'olalearn', count: 10 },
+  3: { slug: 'octosells', count: 11 },
+  4: { slug: 'zaymekspress', count: 10 },
+};
+
+const casesWithPhotos = computed(() =>
+  casesList.value.map((cs, idx) => {
+    const slides = portfolioSlides[idx];
+    return {
+      cs,
+      idx,
+      preview: slides ? `/images/portfolio/slides/${slides.slug}_0.png` : null,
+      slidesCount: slides ? slides.count : 0,
+    };
+  })
+);
 </script>
+
+<style scoped>
+.cases-grid :deep(.case-card) {
+  padding: 1.25rem;
+}
+.cases-grid :deep(.case-card h3) {
+  font-size: 1rem;
+  margin-bottom: .35rem;
+}
+.cases-grid :deep(.case-card p) {
+  font-size: .8rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cases-preview {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #0a0a14;
+}
+.cases-preview-img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #0a0a14;
+}
+.cases-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: rgba(8,8,16,0.75);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(79,142,255,0.2);
+  border-radius: 100px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #4F8EFF;
+  letter-spacing: 0.03em;
+}
+</style>

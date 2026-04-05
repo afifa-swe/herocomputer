@@ -49,6 +49,45 @@
       </div>
     </div>
 
+    <!-- PORTFOLIO PREVIEW -->
+    <section class="section">
+      <div class="section-header">
+        <FadeUp>
+          <div class="section-tag">{{ $t('home.cs_tag') }}</div>
+          <h2 class="section-title" v-html="$t('home.cs_h').replace('\\n','<br>')"></h2>
+        </FadeUp>
+        <FadeUp :delay="100">
+          <router-link to="/portfolio" class="arrow-link">{{ $t('home.cs_more') }}</router-link>
+        </FadeUp>
+      </div>
+      <FadeUp>
+        <div class="grid-3 portfolio-home-grid">
+          <router-link
+            v-for="item in portfolioPreviews"
+            :key="item.idx"
+            :to="'/cases/' + item.idx"
+            class="case-card"
+            style="display:block;text-decoration:none;color:inherit;"
+          >
+            <div class="case-arrow">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="portfolio-home-preview">
+              <img :src="item.preview" :alt="item.cs.h" class="portfolio-home-img" />
+              <span class="portfolio-home-badge">{{ item.slidesCount }} {{ $t('home.photos_label') }}</span>
+            </div>
+            <div class="case-tag">{{ item.cs.tag }}</div>
+            <h3>{{ item.cs.h }}</h3>
+            <p>{{ item.cs.p }}</p>
+            <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;letter-spacing:.1em;color:#CBD5E1;text-transform:uppercase;">{{ item.cs.tech }}</div>
+          </router-link>
+        </div>
+      </FadeUp>
+      <FadeUp style="text-align:center;margin-top:3rem;">
+        <router-link to="/portfolio" class="btn btn-primary">{{ $t('home.portfolio_all') }}</router-link>
+      </FadeUp>
+    </section>
+
     <!-- ABOUT -->
     <section class="section">
       <div class="split">
@@ -152,32 +191,6 @@
       </div>
     </section>
 
-    <!-- CASES PREVIEW -->
-    <section class="section">
-      <div class="section-header">
-        <FadeUp>
-          <div class="section-tag">{{ $t('home.cs_tag') }}</div>
-          <h2 class="section-title" v-html="$t('home.cs_h').replace('\\n','<br>')"></h2>
-        </FadeUp>
-        <FadeUp :delay="100">
-          <router-link to="/cases" class="arrow-link">{{ $t('home.cs_more') }}</router-link>
-        </FadeUp>
-      </div>
-      <FadeUp>
-        <div class="cases-grid">
-          <router-link v-for="(cs, idx) in casesPreviews" :key="idx" :to="'/cases/' + idx" class="case-card" style="display:block;">
-            <div class="case-arrow">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <CaseVisual :type="cs.type" :label="cs.label" />
-            <div class="case-tag">{{ $t('home.c' + (idx+1) + 'tag') }}</div>
-            <h3>{{ $t('home.c' + (idx+1) + 'h2') }}</h3>
-            <p>{{ $t('home.c' + (idx+1) + 'p2') }}</p>
-          </router-link>
-        </div>
-      </FadeUp>
-    </section>
-
     <!-- DEV TEASER -->
     <section class="section section-dark">
       <div class="split">
@@ -228,16 +241,36 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref, reactive, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import FadeUp from '../components/FadeUp.vue';
-import CaseVisual from '../components/CaseVisual.vue';
 
-const casesPreviews = [
-  { label: 'VIEON', type: 'vieon' },
-  { label: 'NO THERE, THERE', type: 'web3' },
-  { label: 'Rx+', type: 'pharmacy' },
-  { label: 'OLA', type: 'olalearn' },
-];
+const { tm } = useI18n();
+const casesList = computed(() => tm('cases.cases_list') || []);
+
+const portfolioSlides = {
+  0: { slug: 'vieon', count: 10 },
+  1: { slug: 'pharmacy', count: 10 },
+  2: { slug: 'olalearn', count: 10 },
+  3: { slug: 'octosells', count: 11 },
+  4: { slug: 'zaymekspress', count: 10 },
+};
+
+const portfolioPreviews = computed(() =>
+  casesList.value
+    .map((cs, idx) => {
+      const slides = portfolioSlides[idx];
+      if (!slides) return null;
+      return {
+        cs,
+        idx,
+        preview: `/images/portfolio/slides/${slides.slug}_0.png`,
+        slidesCount: slides.count,
+      };
+    })
+    .filter(Boolean)
+    .slice(0, 6)
+);
 
 const homeForm = reactive({ name: '', contact: '', message: '' });
 const homeLoading = ref(false);
@@ -262,3 +295,38 @@ async function submitHomeForm() {
   homeLoading.value = false;
 }
 </script>
+
+<style scoped>
+.portfolio-home-preview {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+  background: #0a0a14;
+}
+.portfolio-home-img {
+  width: 100%;
+  height: clamp(200px, 30vw, 300px);
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.portfolio-home-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(8,8,16,0.75);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(79,142,255,0.2);
+  border-radius: 100px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4F8EFF;
+  letter-spacing: 0.03em;
+}
+@media (max-width: 768px) {
+  .portfolio-home-grid { grid-template-columns: 1fr !important; }
+}
+</style>
