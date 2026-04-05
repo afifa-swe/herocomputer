@@ -259,6 +259,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   max-width: 100%;
 }
 .hero h1 em { font-style: normal; color: var(--accent); display: block; }
+.hero-line { display: block; }
+.hero-line.accent { color: var(--accent); }
 .hero-desc {
   font-size: 1.05rem;
   color: var(--muted);

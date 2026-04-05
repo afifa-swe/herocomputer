@@ -8,9 +8,9 @@
       <div class="hero-left">
         <div class="hero-eyebrow">{{ $t('home.eyebrow') }}</div>
         <h1>
-          <span>{{ $t('home.h1a') }}</span>
-          <span>{{ $t('home.h1b') }}</span>
-          <em>{{ $t('home.h1c') }}</em>
+          <span class="hero-line">{{ $t('home.h1a') }}</span>
+          <span class="hero-line">{{ $t('home.h1b') }}</span>
+          <span class="hero-line accent">{{ $t('home.h1c') }}</span>
         </h1>
         <p class="hero-desc">{{ $t('home.desc') }}</p>
         <div class="hero-actions">

@@ -27,7 +27,7 @@ export default {
         desc: "We are not just an agency. We build architectures, systems, and solutions that change the rules of the game \u2014 and generate maximum profit.",
         cta1: "Discuss Project",
         cta2: "Our Services",
-        stat1_num: "120+",
+        stat1_num: "10+",
         stat1_label: "Projects Delivered",
         stat1_desc: "Web, mobile, backend \u2014 across multiple countries",
         stat2_num: "$50",

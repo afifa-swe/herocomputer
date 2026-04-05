@@ -27,7 +27,7 @@ export default {
         desc: "Biz sad\u0259c\u0259 agentlik deyilik. Biz oyunun qaydalar\u0131n\u0131 d\u0259yi\u015fdir\u0259n arxitekturalar, sisteml\u0259r v\u0259 h\u0259ll\u0259r qururuq \u2014 v\u0259 maksimum g\u0259lir g\u0259tiririk.",
         cta1: "Layih\u0259ni m\u00fczakir\u0259 et",
         cta2: "Xidm\u0259tl\u0259rimiz",
-        stat1_num: "120+",
+        stat1_num: "10+",
         stat1_label: "Tamamlanm\u0131\u015f layih\u0259",
         stat1_desc: "Veb, mobil, backend \u2014 bir ne\u00e7\u0259 \u00f6lk\u0259d\u0259",
         stat2_num: "$50",
