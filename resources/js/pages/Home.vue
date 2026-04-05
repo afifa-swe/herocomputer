@@ -169,7 +169,7 @@
             <div class="case-arrow">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <div class="case-card-img" :style="{ background: cs.bg }">{{ cs.label }}</div>
+            <CaseVisual :type="cs.type" :label="cs.label" />
             <div class="case-tag">{{ $t('home.c' + (idx+1) + 'tag') }}</div>
             <h3>{{ $t('home.c' + (idx+1) + 'h2') }}</h3>
             <p>{{ $t('home.c' + (idx+1) + 'p2') }}</p>
@@ -230,12 +230,13 @@
 <script setup>
 import { ref, reactive } from 'vue';
 import FadeUp from '../components/FadeUp.vue';
+import CaseVisual from '../components/CaseVisual.vue';
 
 const casesPreviews = [
-  { label: 'VIEON', bg: 'linear-gradient(135deg,#1a2a1a,#0a1a0a)' },
-  { label: 'NO THERE, THERE', bg: 'linear-gradient(135deg,#1a1a2a,#0a0a1a)' },
-  { label: 'Rx+', bg: 'linear-gradient(135deg,#1a1510,#2a1a08)' },
-  { label: 'OLA', bg: 'linear-gradient(135deg,#101a1a,#081218)' },
+  { label: 'VIEON', type: 'vieon' },
+  { label: 'NO THERE, THERE', type: 'web3' },
+  { label: 'Rx+', type: 'pharmacy' },
+  { label: 'OLA', type: 'olalearn' },
 ];
 
 const homeForm = reactive({ name: '', contact: '', message: '' });

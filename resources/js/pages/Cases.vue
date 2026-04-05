@@ -21,7 +21,7 @@
             <div class="case-arrow">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <div class="case-card-img" :style="{ height: '260px', background: `linear-gradient(135deg,${cs.color},${cs.color2})`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-h)', fontSize: cs.label.length > 10 ? '1.1rem' : '2rem', fontWeight: '800', color: cs.textColor, letterSpacing: '.1em' }">{{ cs.label }}</div>
+            <CaseVisual :type="getVisualType(idx)" :label="cs.label" :color="cs.color" :color2="cs.color2" />
             <div class="case-tag">{{ cs.tag }}</div>
             <h3>{{ cs.h }}</h3>
             <p>{{ cs.p }}</p>
@@ -45,7 +45,13 @@
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import FadeUp from '../components/FadeUp.vue';
+import CaseVisual from '../components/CaseVisual.vue';
 
 const { tm } = useI18n();
 const casesList = computed(() => tm('cases.cases_list') || []);
+
+const visualTypes = ['vieon', 'web3', 'pharmacy', 'olalearn'];
+function getVisualType(idx) {
+  return visualTypes[idx] || 'default';
+}
 </script>

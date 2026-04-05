@@ -15,14 +15,7 @@
     <!-- VISUAL -->
     <section class="section section-dark">
       <FadeUp>
-        <div class="case-detail-visual"
-             :style="{ background: `linear-gradient(135deg, ${cs.color}, ${cs.color2})` }">
-          <div style="font-family:var(--font-h);font-weight:800;letter-spacing:.15em;opacity:.15;"
-               :style="{ fontSize: cs.label.length > 10 ? '3rem' : '5rem', color: cs.textColor || 'rgba(255,255,255,.3)' }">
-            {{ cs.label }}
-          </div>
-          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:50px 50px;"></div>
-        </div>
+        <CaseVisual :type="visualType" :label="cs.label" :color="cs.color" :color2="cs.color2" style="height:clamp(260px,40vw,400px);border-radius:12px;" />
       </FadeUp>
     </section>
 
@@ -110,15 +103,20 @@ import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import FadeUp from '../components/FadeUp.vue';
+import CaseVisual from '../components/CaseVisual.vue';
 
 const route = useRoute();
 const { tm } = useI18n();
 
+const visualTypes = ['vieon', 'web3', 'pharmacy', 'olalearn'];
+const caseId = computed(() => parseInt(route.params.id));
+
 const cs = computed(() => {
   const list = tm('cases.cases_list') || [];
-  const id = parseInt(route.params.id);
-  return list[id] || null;
+  return list[caseId.value] || null;
 });
+
+const visualType = computed(() => visualTypes[caseId.value] || 'default');
 
 function parseList(str) {
   if (!str) return [];
