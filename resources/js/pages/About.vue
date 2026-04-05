@@ -186,7 +186,7 @@ import FadeUp from '../components/FadeUp.vue';
 const { t } = useI18n();
 
 const stats = computed(() => [
-  { num: '120+', label: t('about.stat1') },
+  { num: '10+', label: t('about.stat1') },
   { num: '6+', label: t('about.stat2') },
   { num: '$50', label: t('about.stat3') },
   { num: '24h', label: t('about.stat4') },
