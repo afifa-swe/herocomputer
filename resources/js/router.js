@@ -6,6 +6,7 @@ import Cases from './pages/Cases.vue';
 import CaseDetail from './pages/CaseDetail.vue';
 import Developers from './pages/Developers.vue';
 import Contacts from './pages/Contacts.vue';
+import Portfolio from './pages/Portfolio.vue';
 
 const routes = [
     { path: '/', name: 'home', component: Home },
@@ -13,6 +14,7 @@ const routes = [
     { path: '/services', name: 'services', component: Services },
     { path: '/cases', name: 'cases', component: Cases },
     { path: '/cases/:id', name: 'case-detail', component: CaseDetail },
+    { path: '/portfolio', name: 'portfolio', component: Portfolio },
     { path: '/developers', name: 'developers', component: Developers },
     { path: '/contacts', name: 'contacts', component: Contacts },
 ];
